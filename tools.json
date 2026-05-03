@@ -1,0 +1,32 @@
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "result": {
+    "tools": [
+      {
+        "description": "Ask Fortytwo Prime and get a response",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "max_tokens": {
+              "default": 16384,
+              "description": "Maximum number of tokens in the response (512..128000, default 16384)",
+              "maximum": 128000,
+              "minimum": 512,
+              "type": "integer"
+            },
+            "query": {
+              "description": "Question or task for the Swarm",
+              "type": "string"
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "type": "object"
+        },
+        "name": "ask_fortytwo_prime"
+      }
+    ]
+  }
+}
